@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- additional meta tags -->
+  <meta name="title" content="weatherio">
+  <meta name="description" content="weatherio is a weather app made by shoaib">
+  <title>weatherio</title>
+  <!-- favicon link-->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+  <!-- external css link -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- fontawesome script link  -->
+  <script src="https://kit.fontawesome.com/c478d9fbd5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header class="header">
+    <img src="./assets/images/logo.png" alt="logo">
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" name="search" autocomplete="off" id="cityInput" placeholder="Search city..." result=2>
+    </div>
+    <button class="get-weather" type="submit" id="submit">Get Weather</button>
+  </header>
+  <main>
+    <section class="weather-now">
+      <div class="day-time">
+        <h3 id="day"></h3>
+        <h3 id="time"></h3>
+      </div>
+      <h1 class="now">Now</h1>
+      <div class="current-temperature">
+        <p id="current-deg"><span id="displayTemp"></span></p>
+        <img src="./assets/images/weather_icons/01d.png" alt="weather-condition" id="current-weather-logo">
+      </div>
+      <span id="weather-type"></span>
+      <div class="current-weather-location">
+        <i class="fa-solid fa-location-dot fa-beat"></i>
+        <span id="locationName"></span>
+      </div>
+    </section>
+    <section class="todays-highlights">
+      <h1 class="now">Todays Highlights</h1>
+  <div class="highlights-container">
+      <div class="highlights-item air-quality">
+        <div class="air-head">
+          <h4 class="highlights-heading air-heading">Air Quality Index</h4>
+          <button id="air-index">Good</button>
+        </div>
+          <div class="highlights-detail air-quality-detail">
+          <i class="fa-solid fa-wind"></i>
+          <div class="air-quality-item">
+            <span id="air-details">PM25</span>
+            <span id="PM25"></span>
+          </div>
+           <div class="air-quality-item">
+            <span id="air-details">SO2</span>
+            <span id="SO2"></span>
+          </div>
+           <div class="air-quality-item">
+            <span id="air-details">NO2</span>
+            <span id="NO2"></span>
+          </div>
+           <div class="air-quality-item">
+            <span id="air-details">O3</span>
+            <span id="O3"></span>
+          </div>
+          </div>
+      </div>
+      
+      <div class="highlights-item">
+        <h4 class="highlights-heading">Humidity</h4>
+          <div class="highlights-detail">
+            <i class="fa-solid fa-droplet"></i>
+            <span id="displayHumidity"></span>
+          </div>
+      </div>
+      <div class="highlights-item">
+        <h4 class="highlights-heading">Feels Like</h4>
+          <div class="highlights-detail">
+            <i class="fa-solid fa-temperature-empty"></i>
+            <span id="feelsLike"></span>
+          </div>
+      </div>
+      <div class="highlights-item">
+        <h4 class="highlights-heading">Visibility</h4>
+          <div class="highlights-detail">
+            <i class="fa-solid fa-eye"></i>
+            <span id="displayVisibility"></span>
+          </div>
+      </div>
+      <div class="highlights-item">
+        <h4 class="highlights-heading">Pressure</h4>
+          <div class="highlights-detail">
+            <i class="fa-solid fa-water"></i>
+            <span id="displayPressure"></span>
+          </div>
+      </div>
+      <div class="highlights-item wind-speed-container">
+        <h4 class="highlights-heading">Wind Speed</h4>
+          <div class="highlights-detail">
+            <i class="fa-solid fa-wind "></i>
+            <span id="displayWindSpeed"></span>
+          </div>
+      </div>
+      </div>
+  </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div>Made by <span>&#128154;</span> <span class="design">Shoaib</span></div>
+      <div class="credit">Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></div>
+    </div>
+  </footer>
+  <script src="./api.js"></script>
+ <script src="./app.js"></script> 
+</body>
+</html>
